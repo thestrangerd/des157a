@@ -141,6 +141,10 @@ header img {
 
 /* NAME ------------------------------------------ */
 
+.name-container {
+    position: relative;
+}
+
 h1 {
     color: #332E2E;
     font-size: 17rem;
@@ -170,11 +174,10 @@ h1:hover {
 
 .heart {
     position: absolute;
-    top: 50rem;
-    right: 10%;
-    max-width: 100%;
-    width: 3rem;
-    height: 3rem;
+    top: 7rem;
+    right: -1rem;
+    width: 3em;
+    height: 3em;
 
     background: url('images/heart.svg') no-repeat center center;
     background-size: contain;
@@ -187,10 +190,6 @@ h1:hover {
     color: #E9829A;
     /* changes h1 color on heart hover */
 }
-
-/* .heart:hover {
-    
-} */
 
 @keyframes heartbeat {
     0%, 100% {
