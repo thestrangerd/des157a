@@ -1,0 +1,331 @@
+
+
+
+/* COLOR PALETTE */
+/* BEIGE: #FFF7F2; */
+/* BROWN: #332E2E; */
+/* PINK: #E9829A; */
+
+
+/* UNIVERSAL PROPERTIES ------------------------------------------ */
+
+*, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF7F2;
+    font-family: "Alexandria", serif;
+    font-size: 1rem;
+
+    
+}
+  
+h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    color: #332E2E;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+
+
+/* HEADER ------------------------------------------ */
+
+header p {
+    text-align: center;
+    margin: 3.5em;
+}
+
+span.divider {
+    color: #E9829A;
+    font-weight: 600;
+    padding: 1em;
+}
+
+header img {
+    border-radius: 20em;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* ------------- */
+
+.bars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bar {
+    position: absolute;
+    background-color: #E9829A;
+    animation: moveBars 3s infinite alternate;
+}
+
+.bar:nth-child(1) {
+    top: 20%;
+    width: 10em;
+    height: 1.8em;
+    animation-duration: 6s;
+    animation-delay: -2s;
+}
+.bar:nth-child(2) {
+    top: 30%;
+    width: 20em;
+    height: 1em;
+    animation-duration: 4s;
+    animation-delay: -1s;
+}
+.bar:nth-child(3) {
+    top: 40%;
+    width: 8em;
+    height: 0.6em;
+    animation-duration: 5s;
+    animation-delay: -3s;
+}
+.bar:nth-child(4) {
+    top: 50%;
+    width: 18em;
+    height: 0.5em;
+    animation-duration: 7s;
+    animation-delay: -2s;
+}
+.bar:nth-child(5) {
+    top: 60%;
+    width: 15em;
+    height: 1.8em;
+    animation-duration: 6.5s;
+    animation-delay: -5s;
+}
+
+@keyframes moveBars {
+    0% {
+        transform: translateX(-10vw); 
+    }
+    50% {
+        transform: translateX(100vw); 
+    }
+    100% {
+        transform: translateX(-10vw);
+    }
+}
+
+
+
+
+
+/* NAME ------------------------------------------ */
+
+h1 {
+    color: #332E2E;
+    font-size: 20rem;
+    text-align: center;
+    line-height: 0.5em;
+    margin: 0.5em auto;
+
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+h1:hover {
+    cursor: default;
+} 
+
+.last-name {
+    color: #FFF7F2;
+    font-size: 3rem;
+    font-weight: 800;
+
+    position: absolute;
+    top: 6.2rem;
+    right: 22.5rem;
+}
+
+/* ------------- */
+
+.heart {
+    position: absolute;
+    top: 52rem;
+    right: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    background: url('images/heart.svg') no-repeat center center;
+    background-size: contain;
+
+    transition: transform 0.3s ease-out;
+    animation: heartbeat 1s infinite ease-in-out;
+}
+
+.heart:hover ~ h1 {
+    color: #E9829A;
+    /* changes h1 color on heart hover */
+}
+
+/* .heart:hover {
+    
+} */
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2)
+    }
+}
+
+
+
+
+
+/* PROJECTS ------------------------------------------ */
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    margin: 2em 5em 5em 5em;
+}
+
+.project-card {
+    background-color: white;
+    border: 2px solid #332E2E;
+    border-radius: 20px;
+    flex: 1;
+    padding: 1.5em;
+}
+
+.project-card h2 {
+    font-size: 2rem;
+    border-bottom: 2.5px solid #E9829A;
+    text-align: center;
+    margin: 0.6em 0.5em;
+    padding-bottom: 0.7em;
+}
+
+.project-card li {
+    line-height: 3em;
+}
+
+.project-card a {
+    color: #332E2E;
+    text-decoration: none;
+    margin-left: 1em;
+    padding: 1em;
+    position: relative;
+    transition: font-weight 0.3s ease-in-out;
+}
+
+.project-card a::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    width: 1em;
+    height: 1em;
+
+    background: url('images/heart.svg') no-repeat center center;
+    background-size: contain;
+
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card a:hover {
+    font-weight: 800;
+}
+
+.project-card a:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+.final {
+    font-weight: 800;
+}
+
+
+
+
+
+/* PROJECTS ------------------------------------------ */
+
+footer {
+    background-color: #E9829A;
+    padding: 3em;
+}
+
+footer p {
+    color: #FFF7F2;
+    padding-top: 0.3em;
+}
+
+footer span {
+    font-weight: 800;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    margin: auto 3em;
+}
+
+.contact {
+    display: flex;
+    gap: 40px;
+}
+
+/* ------------- */
+
+.social-icon {
+    color: #FFF7F2;
+    font-size: 1.5rem;
+}
+
+.fa-instagram {
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.fa-instagram:hover {
+    color: #332E2E;
+    transform: scale(1.5);
+}
+
+.fa-linkedin {
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.fa-linkedin:hover {
+    color: #332E2E;
+    transform: scale(1.5);
+}
+
+.fa-envelope {
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.fa-envelope:hover {
+    color: #332E2E;
+    transform: scale(1.5);
+}
