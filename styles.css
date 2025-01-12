@@ -9,7 +9,7 @@
 
 /* UNIVERSAL PROPERTIES ------------------------------------------ */
 
-*, *::before {
+* {
     box-sizing: border-box;
 }
 
@@ -17,7 +17,9 @@ body {
     background-color: #FFF7F2;
     font-family: "Alexandria", serif;
     font-size: 1rem;
+}
 
+main {
     max-width: 1200px;
     min-width: 800px;
     margin: 0 auto;
@@ -76,6 +78,7 @@ header img {
     height: 100%;
     z-index: 1;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .bar {
@@ -169,6 +172,7 @@ h1:hover {
     position: absolute;
     top: 49rem;
     right: 10rem;
+    max-width: 100%;
     width: 3rem;
     height: 3rem;
 
@@ -274,7 +278,7 @@ h1:hover {
 /* PROJECTS ------------------------------------------ */
 
 footer {
-    margin: 5em 1.5em;
+    margin: 5em 5em;
 }
 
 footer p {
