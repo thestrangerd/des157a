@@ -18,7 +18,9 @@ body {
     font-family: "Alexandria", serif;
     font-size: 1rem;
 
-    
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
 }
   
 h1, h2, p, ul {
@@ -138,7 +140,7 @@ header img {
 
 h1 {
     color: #332E2E;
-    font-size: 20rem;
+    font-size: 17rem;
     text-align: center;
     line-height: 0.5em;
     margin: 0.5em auto;
@@ -157,18 +159,18 @@ h1:hover {
     font-weight: 800;
 
     position: absolute;
-    top: 6.2rem;
-    right: 22.5rem;
+    top: 5.1rem;
+    right: 16rem;
 }
 
 /* ------------- */
 
 .heart {
     position: absolute;
-    top: 52rem;
-    right: 3rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    top: 49rem;
+    right: 10rem;
+    width: 3rem;
+    height: 3rem;
 
     background: url('images/heart.svg') no-repeat center center;
     background-size: contain;
@@ -204,7 +206,7 @@ h1:hover {
 .card-container {
     display: flex;
     gap: 30px;
-    margin: 2em 5em 5em 5em;
+    margin: 2em 1em;
 }
 
 .project-card {
@@ -230,7 +232,7 @@ h1:hover {
 .project-card a {
     color: #332E2E;
     text-decoration: none;
-    margin-left: 1em;
+    margin-left: 0.7em;
     padding: 1em;
     position: relative;
     transition: font-weight 0.3s ease-in-out;
@@ -272,13 +274,18 @@ h1:hover {
 /* PROJECTS ------------------------------------------ */
 
 footer {
-    background-color: #E9829A;
-    padding: 3em;
+    margin: 5em 1.5em;
 }
 
 footer p {
-    color: #FFF7F2;
+    color: #332E2E;
     padding-top: 0.3em;
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+footer p:hover {
+    cursor: default;
+    border-bottom: 2px solid #E9829A;
 }
 
 footer span {
@@ -288,7 +295,6 @@ footer span {
 .footer-container {
     display: flex;
     justify-content: space-between; 
-    margin: auto 3em;
 }
 
 .contact {
@@ -299,33 +305,15 @@ footer span {
 /* ------------- */
 
 .social-icon {
-    color: #FFF7F2;
+    color: #332E2E;
     font-size: 1.5rem;
 }
 
-.fa-instagram {
+.fa-instagram, .fa-linkedin, .fa-envelope {
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.fa-instagram:hover {
-    color: #332E2E;
-    transform: scale(1.5);
-}
-
-.fa-linkedin {
-    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.fa-linkedin:hover {
-    color: #332E2E;
-    transform: scale(1.5);
-}
-
-.fa-envelope {
-    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.fa-envelope:hover {
-    color: #332E2E;
+.fa-instagram:hover, .fa-linkedin:hover, .fa-envelope:hover {
+    color: #E9829A;
     transform: scale(1.5);
 }
