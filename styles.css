@@ -237,6 +237,7 @@ h1:hover {
     text-decoration: none;
     margin-left: 0.7em;
     padding: 1em;
+
     position: relative;
     transition: font-weight 0.3s ease-in-out;
 }
@@ -268,6 +269,11 @@ h1:hover {
 
 .final {
     font-weight: 800;
+    transition: color 0.3s ease-in-out;
+}
+
+.final:hover {
+    color: #E9829A;
 }
 
 
@@ -290,10 +296,7 @@ footer p {
 footer p:hover {
     cursor: default;
     border-bottom: 2px solid #E9829A;
-}
-
-footer span {
-    font-weight: 800;
+    padding-bottom: 0.3em;
 }
 
 .footer-container {
