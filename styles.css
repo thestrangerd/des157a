@@ -189,6 +189,7 @@ h1:hover {
 .heart:hover ~ h1 {
     color: #E9829A;
     /* changes h1 color on heart hover */
+    animation: heartbeat 1s infinite ease-in-out;
 }
 
 @keyframes heartbeat {
