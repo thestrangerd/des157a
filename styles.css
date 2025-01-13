@@ -295,7 +295,10 @@ h1:hover {
 
 footer {
     max-width: 1200px;
+    display: flex;
+    justify-content: space-between; 
     margin: 5em auto;
+    padding: 0 3em;
 }
 
 footer p {
@@ -308,11 +311,6 @@ footer p:hover {
     cursor: default;
     border-bottom: 2px solid #E9829A;
     padding-bottom: 0.3em;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between; 
 }
 
 .contact {
