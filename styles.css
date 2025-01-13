@@ -182,6 +182,7 @@ h1:hover {
     background: url('images/heart.svg') no-repeat center center;
     background-size: contain;
 
+    z-index: 2;
     transition: transform 0.3s ease-out;
     animation: heartbeat 1s infinite ease-in-out;
 }
@@ -189,7 +190,7 @@ h1:hover {
 .heart:hover ~ h1 {
     color: #E9829A;
     /* changes h1 color on heart hover */
-    animation: heartbeat 1s infinite ease-in-out;
+    animation: name-heartbeat 1s infinite ease-in-out;
 }
 
 @keyframes heartbeat {
@@ -198,6 +199,15 @@ h1:hover {
     }
     50% {
         transform: scale(1.2)
+    }
+}
+
+@keyframes name-heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1)
     }
 }
 
@@ -315,13 +325,10 @@ footer p:hover {
 .social-icon {
     color: #332E2E;
     font-size: 1.5rem;
-}
-
-.fa-instagram, .fa-linkedin, .fa-envelope {
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.fa-instagram:hover, .fa-linkedin:hover, .fa-envelope:hover {
+.social-icon:hover {
     color: #E9829A;
     transform: scale(1.5);
 }
