@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experiment 1</title>
+
+        <!-- NORMALIZE -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <!-- ALEXANDRIA -->
+            <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+        <style>
+
+            body {
+                background: #FFF7F2;
+                text-align: center;
+                margin: 20em;
+            }
+
+            h1, h2 {
+                color: #332E2E;
+                font-family: "Alexandria", serif;
+            }
+
+            h1 { 
+                transition: color 0.5s ease;
+            }
+
+            h1:hover {
+                color: #E9829A;
+                cursor: default;
+            } 
+
+            h2 {
+                font-weight: 400;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Experiment 1</h1>
+        <h2>Use "Option," "Command," "J" to open the console.</h2>
+
+        <script>
+
+            // SEQUENCE
+            var userInput = prompt ("Enter 'even' or 'odd':").toLowerCase();
+
+            if (userInput !=="even" && userInput !=="odd") {
+                console.log ("Invalid answer. Please refresh and enter 'even' or 'odd'");
+            } else {
+                var triangle = "";
+            }
+
+            for (var i = 1; i <= 7; i++) { // LOOP
+                triangle += "#"; // adds 7 #
+
+                if (userInput =='even' && i % 2 === 0 || userInput =='odd' && i % 2 === 1) { // SELECTION
+                    console.log (triangle);
+                }
+            }
+
+            triangle = "########"; // resets to 8 #
+
+            for (var i = triangle.length; i > 0; i--) { 
+
+                if (userInput =='even' && i % 2 === 0 || userInput =='odd' && i % 2 === 1) {
+                    console.log (triangle);
+                }
+
+                triangle = triangle.slice (0, -1); // subtracts 1 #
+            }
+
+            // creates a pyramid of triangles from 1-8
+            // if user inputs "even" then only show even #
+            // if user inputs "odd" then only show odd #
+
+        </script>
+
+    </body>
+
+</html>
