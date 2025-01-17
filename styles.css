@@ -243,26 +243,26 @@ h1:hover {
     animation-delay: -2s;
 }
 .bar:nth-child(2) {
-    top: 37%;
+    top: 38%;
     width: 20em;
     height: 0.6em;
     animation-duration: 4s;
     animation-delay: -1s;
 }
 .bar:nth-child(3) {
-    top: 39%;
+    top: 40%;
     width: 8em;
     height: 0.3em;
     animation-duration: 5s;
     animation-delay: -3s;
 }
-.bar:nth-child(4) {
+/* .bar:nth-child(4) {
     top: 40%;
     width: 18em;
     height: 0.4em;
     animation-duration: 7s;
     animation-delay: -2s;
-}
+} */
 .bar:nth-child(5) {
     top: 42%;
     width: 15em;
