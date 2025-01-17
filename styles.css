@@ -236,26 +236,26 @@ h1:hover {
 }
 
 .bar:nth-child(1) {
-    top: 36%;
+    top: 37%;
     width: 10em;
     height: 0.4em;
     animation-duration: 6s;
     animation-delay: -2s;
 }
 .bar:nth-child(2) {
-    top: 38%;
+    top: 39%;
     width: 20em;
     height: 0.6em;
     animation-duration: 4s;
     animation-delay: -1s;
 }
-.bar:nth-child(3) {
+/* .bar:nth-child(3) {
     top: 40%;
     width: 8em;
     height: 0.3em;
     animation-duration: 5s;
     animation-delay: -3s;
-}
+} */
 /* .bar:nth-child(4) {
     top: 40%;
     width: 18em;
@@ -264,7 +264,7 @@ h1:hover {
     animation-delay: -2s;
 } */
 .bar:nth-child(5) {
-    top: 42%;
+    top: 41%;
     width: 15em;
     height: 0.8em;
     animation-duration: 6.5s;
