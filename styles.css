@@ -79,7 +79,8 @@ h1 {
     font-size: 17rem;
     text-align: center;
     line-height: 0.5em;
-    margin: 0.3em auto;
+    margin: 0.2em auto;
+    margin-bottom: 0.4em;
 
     position: relative;
     transition: color 0.5s ease;
@@ -235,37 +236,37 @@ h1:hover {
 }
 
 .bar:nth-child(1) {
-    top: 45%;
+    top: 36%;
     width: 10em;
-    height: 1.8em;
+    height: 0.4em;
     animation-duration: 6s;
     animation-delay: -2s;
 }
 .bar:nth-child(2) {
-    top: 55%;
+    top: 37%;
     width: 20em;
-    height: 1em;
+    height: 0.6em;
     animation-duration: 4s;
     animation-delay: -1s;
 }
 .bar:nth-child(3) {
-    top: 65%;
+    top: 39%;
     width: 8em;
-    height: 0.6em;
+    height: 0.3em;
     animation-duration: 5s;
     animation-delay: -3s;
 }
 .bar:nth-child(4) {
-    top: 75%;
+    top: 40%;
     width: 18em;
-    height: 0.5em;
+    height: 0.4em;
     animation-duration: 7s;
     animation-delay: -2s;
 }
 .bar:nth-child(5) {
-    top: 80%;
+    top: 42%;
     width: 15em;
-    height: 1.8em;
+    height: 0.8em;
     animation-duration: 6.5s;
     animation-delay: -5s;
 }
