@@ -52,7 +52,7 @@ img {
 
 header p {
     text-align: center;
-    margin: 3.5em;
+    margin-top: 2.7em;
 }
 
 span.divider {
@@ -70,77 +70,6 @@ header img {
 
 /* ------------- */
 
-.bars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.bar {
-    position: absolute;
-    background-color: #E9829A;
-    animation: moveBars 3s infinite alternate;
-}
-
-.bar:nth-child(1) {
-    top: 20%;
-    width: 10em;
-    height: 1.8em;
-    animation-duration: 6s;
-    animation-delay: -2s;
-}
-.bar:nth-child(2) {
-    top: 35%;
-    width: 20em;
-    height: 1em;
-    animation-duration: 4s;
-    animation-delay: -1s;
-}
-.bar:nth-child(3) {
-    top: 45%;
-    width: 8em;
-    height: 0.6em;
-    animation-duration: 5s;
-    animation-delay: -3s;
-}
-.bar:nth-child(4) {
-    top: 50%;
-    width: 18em;
-    height: 0.5em;
-    animation-duration: 7s;
-    animation-delay: -2s;
-}
-.bar:nth-child(5) {
-    top: 60%;
-    width: 15em;
-    height: 1.8em;
-    animation-duration: 6.5s;
-    animation-delay: -5s;
-}
-
-@keyframes moveBars {
-    0% {
-        transform: translateX(-10vw); 
-    }
-    50% {
-        transform: translateX(100vw); 
-    }
-    100% {
-        transform: translateX(-10vw);
-    }
-}
-
-
-
-
-
-/* NAME ------------------------------------------ */
-
 .name-container {
     position: relative;
 }
@@ -150,7 +79,7 @@ h1 {
     font-size: 17rem;
     text-align: center;
     line-height: 0.5em;
-    margin: 0.5em auto;
+    margin: 0.3em auto;
 
     position: relative;
     transition: color 0.5s ease;
@@ -167,15 +96,15 @@ h1:hover {
 
     position: absolute;
     top: 5.1rem;
-    right: 16rem;
+    right: 25rem;
 }
 
 /* ------------- */
 
 .heart {
     position: absolute;
-    top: 7rem;
-    right: -1rem;
+    top: 7.5rem;
+    right: 9rem;
     width: 3em;
     height: 3em;
 
@@ -220,7 +149,6 @@ h1:hover {
 .card-container {
     display: flex;
     gap: 30px;
-    margin: 2em 1em;
 }
 
 .project-card {
@@ -287,6 +215,73 @@ h1:hover {
     color: #E9829A;
 }
 
+/* ------------- */
+
+.bars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bar {
+    position: absolute;
+    background-color: #E9829A;
+    animation: moveBars 3s infinite alternate;
+}
+
+.bar:nth-child(1) {
+    top: 45%;
+    width: 10em;
+    height: 1.8em;
+    animation-duration: 6s;
+    animation-delay: -2s;
+}
+.bar:nth-child(2) {
+    top: 55%;
+    width: 20em;
+    height: 1em;
+    animation-duration: 4s;
+    animation-delay: -1s;
+}
+.bar:nth-child(3) {
+    top: 65%;
+    width: 8em;
+    height: 0.6em;
+    animation-duration: 5s;
+    animation-delay: -3s;
+}
+.bar:nth-child(4) {
+    top: 75%;
+    width: 18em;
+    height: 0.5em;
+    animation-duration: 7s;
+    animation-delay: -2s;
+}
+.bar:nth-child(5) {
+    top: 80%;
+    width: 15em;
+    height: 1.8em;
+    animation-duration: 6.5s;
+    animation-delay: -5s;
+}
+
+@keyframes moveBars {
+    0% {
+        transform: translateX(-10vw); 
+    }
+    50% {
+        transform: translateX(100vw); 
+    }
+    100% {
+        transform: translateX(-10vw);
+    }
+}
+
 
 
 
@@ -294,10 +289,9 @@ h1:hover {
 /* PROJECTS ------------------------------------------ */
 
 footer {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between; 
-    margin: 5em auto;
+    margin: 2.5em 9em;
     padding: 0 3em;
 }
 
