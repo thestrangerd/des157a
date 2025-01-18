@@ -1,0 +1,165 @@
+
+
+
+/* COLOR PALETTE */
+/* BEIGE: #FFF7F2; */
+/* BROWN: #332E2E; */
+/* PINK: #E9829A; */
+
+/* UNIVERSAL PROPERTIES ------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF7F2;
+    font-family: "Alexandria", serif;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+  
+h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    color: #332E2E;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+
+
+/* HEADER ------------------------------------------ */
+
+header {
+    background-color: #FFF7F2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+h1 {
+    color: #332E2E;
+    font-size: 5rem;
+    text-align: center;
+    padding: 0.3em 0;
+    transition: color 0.5s ease;
+}
+
+h1:hover {
+    color: #E9829A;
+    cursor: default;
+    animation: name-heartbeat 1s infinite ease-in-out;
+}
+
+@keyframes name-heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1)
+    }
+}
+
+
+
+
+/* JOURNALS ------------------------------------------ */
+
+.journal {
+    background-color: white;
+    border: 2px solid #332E2E;
+    border-radius: 20px;
+    margin: 2em 12em;
+    padding: 3em;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0.5em 0 0.2em 1em;
+}
+
+.date {
+    color: #E9829A;
+    font-size: 1rem;
+    margin-left: 2em;
+    margin-bottom: 1.5em;
+}
+
+.heart {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 0.3em;
+}
+
+.text {
+    line-height: 1.5rem;
+    margin: 0 2em;
+}
+
+
+
+
+/* FOOTER ------------------------------------------ */
+
+footer {
+    background-color: #FFF7F2;
+    display: flex;
+    justify-content: space-between; 
+
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+
+    margin: 0em 20em;
+    padding: 2em 3em;
+}
+
+footer .portal {
+    color: #332E2E;
+    text-decoration: none;
+    transition: border-bottom 0.4s ease-in-out, color 0.2s ease-in-out;
+}
+
+footer .portal:hover {
+    color: #E9829A;
+    border-bottom: 2px solid #E9829A;
+    padding-bottom: 0.3em;
+}
+
+.contact {
+    display: flex;
+    gap: 40px;
+}
+
+/* ------------- */
+
+.social-icon {
+    color: #332E2E;
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #E9829A;
+    transform: scale(1.5);
+}
