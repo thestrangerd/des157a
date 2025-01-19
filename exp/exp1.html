@@ -24,7 +24,7 @@
                 margin: 20em;
             }
 
-            h1, h2 {
+            h1, h2, footer {
                 color: #332E2E;
                 font-family: "Alexandria", serif;
             }
@@ -42,6 +42,26 @@
                 font-weight: 400;
             }
 
+            footer{
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            footer .portal {
+                color: #332E2E;
+                font-size: 1.1rem;
+                text-decoration: none;
+                transition: border-bottom 0.4s ease-in-out, color 0.2s ease-in-out;
+            }
+
+            footer .portal:hover {
+                color: #E9829A;
+                border-bottom: 2px solid #E9829A;
+                padding-bottom: 0.3em;
+            }
+
         </style>
     </head>
 
@@ -49,6 +69,12 @@
 
         <h1>Experiment 1</h1>
         <h2>Use "Option," "Command," "J" to open the console.</h2>
+
+        <footer>
+            <a href="../index.html" class="portal">back to portal page</a>
+        </footer>
+
+
 
         <script>
 
