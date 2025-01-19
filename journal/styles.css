@@ -32,10 +32,6 @@ h1, h2, p, ul {
 h1, h2, p {
     color: #332E2E;
 }
-
-ul {
-    list-style-type: none;
-}
   
 img {
     display: block;
@@ -114,6 +110,41 @@ h2 {
 .text {
     line-height: 1.5rem;
     margin: 0 2em;
+    margin-bottom: 1.5em;
+}
+
+.journal a {
+    color: #332E2E;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.journal a:hover {
+    color: #E9829A;
+}
+
+ul li {
+    line-height: 1.5em;
+    margin-left: 3em;
+}
+
+/* ------------- */
+
+.example {
+    display: flex;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+figcaption {
+    color: #E9829A;
+    line-height: 1.5em;
+    margin: 1em 0.5em 0 1.2em;;
+}
+
+figcaption span {
+    color: #332E2E;
+    display: block;
 }
 
 
@@ -129,14 +160,13 @@ footer {
     position: sticky;
     bottom: 0;
     z-index: 1;
-
-    margin: 0em 20em;
     padding: 2em 3em;
 }
 
 footer .portal {
     color: #332E2E;
     text-decoration: none;
+    margin-left: 20%;
     transition: border-bottom 0.4s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -147,6 +177,7 @@ footer .portal:hover {
 }
 
 .contact {
+    margin-right: 20%;
     display: flex;
     gap: 40px;
 }
