@@ -169,6 +169,7 @@ h1:hover {
 }
 
 .project-card li {
+    font-size: 1rem;
     line-height: 3em;
 }
 
@@ -299,13 +300,15 @@ footer {
 footer p {
     color: #332E2E;
     padding-top: 0.3em;
-    transition: border-bottom 0.2s ease-in-out;
+    cursor: default;
 }
 
-footer p:hover {
-    cursor: default;
-    border-bottom: 2px solid #E9829A;
-    padding-bottom: 0.3em;
+.footer-name {
+    transition: color 0.5s ease;
+}
+
+footer p:hover ~ .footer-name {
+    color: #E9829A;
 }
 
 .contact {
