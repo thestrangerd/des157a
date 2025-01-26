@@ -328,3 +328,8 @@ footer p:hover ~ .footer-name {
     color: #E9829A;
     transform: scale(1.5);
 }
+
+
+/* min-width: 800px */
+/* width: 90% */
+/* max-width: 1200px */
