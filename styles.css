@@ -104,10 +104,10 @@ h1:hover {
 
 .heart {
     position: absolute;
-    top: 7.5rem;
-    right: 9rem;
-    width: 3em;
-    height: 3em;
+    top: 80%;
+    right: 10%;
+    width: 3rem;
+    height: 3rem;
 
     background: url('images/heart.svg') no-repeat center center;
     background-size: contain;
