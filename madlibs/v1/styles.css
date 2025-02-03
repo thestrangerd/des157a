@@ -10,17 +10,21 @@
 body {
     background-color: #AFDADE;
     font-family: "Jockey One", serif;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 main {
     /* margin: 1em 2em; */
+    margin-top: 2em;
     margin-left: 3em;
 }
 
 #layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
 }
 
 h1, h2, p, select {
@@ -42,21 +46,74 @@ img {
 
 
 
+/* BACKGROUND ------------------------------------------ */
+
+.cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+    position: absolute;
+    z-index: -1; /* Puts the clouds behind the content */
+}
+
+/* BEHIND "THE" */
+.cloud1 {
+    top: 25%;
+    left: -5%;
+    width: 25%;
+} 
+
+/* BEHIND "MAKING" */
+.cloud2 {
+    top: 10%;
+    left: 40%;
+    width: 30%;
+}
+
+/* RIGHT OF FORMS */
+.cloud3 {
+    top: 40%;
+    left: 80%;
+    width: 25%;
+}
+
+/* RIGHT OF HERO */
+.cloud4 {
+    top: 65%;
+    left: 35%;
+    width: 25%;
+}
+
+/* HERO FOOT */
+.cloud5 {
+    top: 85%;
+    bottom: 0;
+    left: -7%;
+    width: 35%;
+    max-height: 100vh;
+}
+
+/* SUBMIT BUTTON */
+.cloud6 {
+    top: 90%;
+    bottom: 0;
+    left: 75%;
+    width: 30%;
+    max-height: 100vh;
+}
+
+
+
 /* LEFT SIDE ------------------------------------------ */
 
 .left-column {
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    gap: 0.5em;
-    /* margin-left: 1em; */
+    margin-left: 1em;    
 }
 
 h1 {
     color: #163030;
     font-size: 10rem; 
     line-height: 0.8em;
-    /* margin-top: 0.1em; */
 }
 
 .hero {
