@@ -8,7 +8,6 @@
 }
 
 body {
-    background-color: #AFDADE;
     font-family: "Jockey One", serif;
     position: relative;
     overflow-x: hidden;
@@ -16,7 +15,6 @@ body {
 }
 
 main {
-    /* margin: 1em 2em; */
     margin-top: 2em;
     margin-left: 3em;
 }
@@ -46,58 +44,78 @@ img {
 
 
 
+
+
 /* BACKGROUND ------------------------------------------ */
 
-.cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
-    position: absolute;
-    z-index: -1; /* Puts the clouds behind the content */
+.background {
+    background: url('images/background.svg') repeat-x;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 200%;
+    height: 100vh;
+    animation: scrollBackground 20s linear infinite;
 }
 
+@keyframes scrollBackground {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/* .cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+    position: absolute;
+    z-index: -1; /* Puts the clouds behind the content 
+}*/
+
 /* BEHIND "THE" */
-.cloud1 {
+/* .cloud1 {
     top: 25%;
     left: -5%;
     width: 25%;
-} 
+}  */
 
 /* BEHIND "MAKING" */
-.cloud2 {
+/* .cloud2 {
     top: 10%;
     left: 40%;
     width: 30%;
-}
+} */
 
 /* RIGHT OF FORMS */
-.cloud3 {
+/* .cloud3 {
     top: 40%;
     left: 80%;
     width: 25%;
-}
+} */
 
 /* RIGHT OF HERO */
-.cloud4 {
+/* .cloud4 {
     top: 65%;
     left: 35%;
     width: 25%;
-}
+} */
 
 /* HERO FOOT */
-.cloud5 {
+/* .cloud5 {
     top: 85%;
     bottom: 0;
     left: -7%;
     width: 35%;
     max-height: 100vh;
-}
+} */
 
 /* SUBMIT BUTTON */
-.cloud6 {
+/* .cloud6 {
     top: 90%;
     bottom: 0;
     left: 75%;
     width: 30%;
     max-height: 100vh;
-}
+} */
 
 
 
