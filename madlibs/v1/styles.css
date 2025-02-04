@@ -119,6 +119,7 @@ h1:hover {
 }
 
 input, select {
+    font-size: 1.1rem;
     border-radius: 10px;
     border: none;
     
