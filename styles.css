@@ -17,6 +17,7 @@ body {
     background-color: #FFF7F2;
     font-family: "Alexandria", serif;
     font-size: 1rem;
+    overflow: hidden;
 }
 
 main {
