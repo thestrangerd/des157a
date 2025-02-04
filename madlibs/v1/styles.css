@@ -63,6 +63,7 @@ img {
     display: flex;
     flex-direction: column; 
     align-items: center; 
+    position: relative;
     margin-left: 1em;    
 }
 
@@ -77,6 +78,24 @@ h1:hover {
     cursor: default;
     color: #C31E1C;
     transform: scale(1.1);
+}
+
+.portal {
+    color: #C31E1C;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+    position: absolute;
+    top: 35%;
+    left: 0;
+    z-index: 1;
+    margin-left: 1em;
+    transition: border-bottom 0.5s ease;
+}
+
+.portal:hover {
+    border-bottom: 2px solid #C31E1C;
+    padding-bottom: 0.3em;
 }
 
 .hero {
