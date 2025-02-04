@@ -71,13 +71,12 @@ h1 {
     color: #163030;
     font-size: 10rem; 
     line-height: 0.8em;
-    transition: color 0.5s ease, transform 0.5s ease;
+    transition: color 0.5s ease;
 }
 
 h1:hover {
     cursor: default;
     color: #C31E1C;
-    transform: scale(1.1);
 }
 
 .portal {
@@ -86,21 +85,23 @@ h1:hover {
     text-decoration: none;
 
     position: absolute;
-    top: 35%;
+    top: 36%;
     left: 0;
     z-index: 1;
     margin-left: 1em;
-    transition: border-bottom 0.5s ease;
+    transition: border-bottom 0.5s ease, transform 0.5s ease;
 }
 
 .portal:hover {
-    border-bottom: 2px solid #C31E1C;
-    padding-bottom: 0.3em;
+    color: #A80911;
+    border-bottom: 2px solid #A80911;
+    padding-bottom: 0.2em;
+    transform: scale(1.05);
 }
 
 .hero {
-    width: 38em;
-    margin-top: -4em;
+    margin-top: -3em;
+    margin-left: 4em;
     animation: float 2.5s ease-in-out infinite;
 }
 
