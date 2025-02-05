@@ -85,7 +85,7 @@ h1:hover {
     text-decoration: none;
 
     position: absolute;
-    top: 36%;
+    top: 35%;
     left: 0;
     z-index: 1;
     margin-left: 1em;
@@ -100,8 +100,7 @@ h1:hover {
 }
 
 .hero {
-    margin-top: -3em;
-    margin-left: 4em;
+    margin-top: -5em;
     animation: float 2.5s ease-in-out infinite;
 }
 
