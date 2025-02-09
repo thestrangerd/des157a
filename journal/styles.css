@@ -63,16 +63,6 @@ h1 {
 h1:hover {
     color: #E9829A;
     cursor: default;
-    animation: name-heartbeat 1s infinite ease-in-out;
-}
-
-@keyframes name-heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1)
-    }
 }
 
 
@@ -104,7 +94,7 @@ h2 {
     display: inline-block;
     width: 0.8em;
     height: 0.8em;
-    margin-right: 0.3em;
+    margin: auto 0.3em;
 }
 
 .text {
@@ -128,12 +118,27 @@ ul li {
     margin-left: 3em;
 }
 
+.video {
+    width: 90%;
+    border-radius: 10px;
+    display: block;
+    margin: 1em auto 1.5em auto;
+}
+
 /* ------------- */
 
 .example {
     display: flex;
     margin-left: 1.5em;
     margin-bottom: 1em;
+}
+
+.pic-example {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    max-width: 45%;
+    margin: 0 auto 1.4em auto;
 }
 
 figcaption {
