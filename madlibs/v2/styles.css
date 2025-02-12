@@ -17,10 +17,9 @@ main {
     margin: 2em 0 0 3em;
 }
 
-#screen1 {
+#screen1, #screen2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
 }
 
 h1, h2, p, select {
@@ -189,23 +188,27 @@ form input[type="submit"] {
 
 
 
-
-
 /* TRANSITION ------------------------------------------ */
 
-#screen1, #screen2 {
-    position: relative;
-}
-
 .screen {
+    position: absolute;
     width: 100%;
-    height: 100%;
     animation-duration: 2s;
     animation-timing-function: ease;
 }
 
+.starting1 {
+    opacity: 1;
+    transform: translateY(0svh);
+}
+
+.starting2 {
+    opacity: 0;
+    transform: translateY(100svh);
+}
+
 .hidden {
-    animation: screen1 1s forwards;
+    animation: screen1 2s forwards;
 }
 
 .showing {
@@ -219,14 +222,14 @@ form input[type="submit"] {
     }
     100% {
         opacity: 0;
-        transform: translateY(100vh);
+        transform: translateY(100svh);
     }
 }
 
 @keyframes screen2 {
     0% {
         opacity: 0;
-        transform: translateY(-100vh);
+        transform: translateY(-100svh);
     }
 
     100% {
@@ -235,12 +238,54 @@ form input[type="submit"] {
     }
 }
 
-/* .hidden {
-    opacity: 0;
-    transform: translateY(100vh); 
+
+
+/* SCREEN 2 (MADLIB) ------------------------------------------ */
+
+#screen2 {
+    position: relative;
+    width: 100%;
 }
 
-.showing {
-    opacity: 1;
-    transform: translateY(0);
-} */
+.star {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: star 2s ease forwards;
+}
+
+.flyhero {
+    z-index: 1;
+    animation: superhero 2s ease forwards;
+}
+
+@keyframes superhero {
+    0% {
+        transform: rotate(70deg) translateX(-50vw) translateY(20vh);
+    }
+
+    100% {
+        transform: rotate(50deg) translateX(10vw) translateY(5vh);
+    }
+}
+
+
+@keyframes star {
+    0% {
+        transform: scale(1); 
+    }
+
+    100% {
+        transform: scale(1.2); 
+    }
+}
+
+#screen2 p {
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+}
+
