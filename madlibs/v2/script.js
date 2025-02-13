@@ -17,6 +17,8 @@
     madlibForm.addEventListener('submit', function(event) {
         event.preventDefault();
         processFormData(formData);
+        screen1.className = "screen hidden";
+            screen2.className = "screen showing";
     });
 
 
@@ -39,8 +41,7 @@
             formError(formData, emptyfields); // show errors depending on input values or empty fields
         } else { // if no empty fields then...
             makeMadlib(inputs); // make final madlib
-            screen1.className = "screen hidden";
-            screen2.className = "screen showing";
+            
         }
     }
 
@@ -71,8 +72,5 @@
             eachField.value = ''; // clear input field after madlib is created
         }
     }
-
-    console.log('Tracked Inputs:', formData);
-    formData.forEach(input => console.log(input.id, input.value));
 
 })();

@@ -143,6 +143,13 @@ ul li {
 
 figcaption {
     color: #E9829A;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: -0.5em 0 1em 0;
+}
+
+#google {
+    color: #E9829A;
     line-height: 1.5em;
     margin: 1em 0.5em 0 1.2em;;
 }
@@ -150,6 +157,10 @@ figcaption {
 figcaption span {
     color: #332E2E;
     display: block;
+}
+
+span {
+    color: #E9829A;
 }
 
 
