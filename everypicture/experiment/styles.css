@@ -1,0 +1,24 @@
+
+
+
+img {
+    margin: 3em 5em;
+    filter: drop-shadow(0 0 3px white) grayscale(100%);
+    transition: filter 0.3s ease;
+    animation: shake 1.2s infinite steps(1);
+}
+
+img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px hotpink) grayscale(0%) saturate(1.2);
+}
+
+@keyframes shake {
+    0%, 100% {transform: rotate(-15deg);}
+    50% {transform: rotate(15deg);}
+}
+
+
+
+
+
