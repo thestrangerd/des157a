@@ -1,16 +1,23 @@
 
 
 
-img {
-    margin: 3em 5em;
+h1 {
+    font-family: "Alexandria", serif;
+    text-align: center;
+}
+
+
+
+
+.stuffie {
+    margin: 3em 4em;
     filter: drop-shadow(0 0 3px white) grayscale(100%);
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
     animation: shake 1.2s infinite steps(1);
 }
 
-img:hover {
-    cursor: pointer;
-    filter: drop-shadow(0 0 8px hotpink) grayscale(0%) saturate(1.2);
+.bunbun {
+    margin-top: -1em;
 }
 
 @keyframes shake {
@@ -21,4 +28,48 @@ img:hover {
 
 
 
+.conveyor {
+    position: absolute;
+    top: 60%;
+    width: 100vw;
+    overflow: hidden;
+}
 
+.belt {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: moveBelt 10s infinite linear;
+}
+
+.belt img {
+    width: 100px;
+    height: 40%;
+}
+
+
+@keyframes moveBelt {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+#cart {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 10%;
+}
+
+@keyframes cartMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(500px);
+    }
+}
