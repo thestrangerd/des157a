@@ -139,6 +139,6 @@ a:hover {
         transform: translateX(0);
     }
     to {
-        transform: translateX(500px);
+        transform: translateX(600px);
     }
 }
