@@ -1,23 +1,41 @@
 
 
 
-h1 {
+/* TEXT ------------------------------------- */
+
+header, h1, a {
+    color: #332E2E;
     font-family: "Alexandria", serif;
     text-align: center;
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: #E9829A;
+    border-bottom: 2px solid #E9829A;
+    padding-bottom: 0.1em;
 }
 
 
 
 
+/* STUFFED ANIMALS ------------------------------------- */
+
 .stuffie {
     margin: 3em 4em;
-    filter: drop-shadow(0 0 3px white) grayscale(100%);
+    filter: grayscale(100%);
     transition: filter 0.3s ease, transform 0.3s ease;
     animation: shake 1.2s infinite steps(1);
 }
 
-.bunbun {
-    margin-top: -1em;
+.bigbun {
+    position: relative;
+    margin-top: -2em;
 }
 
 @keyframes shake {
@@ -27,6 +45,54 @@ h1 {
 
 
 
+
+/* OVERLAY ------------------------------------- */
+
+#container {
+    display: flex;
+    gap: 20px;
+}
+
+#overlay {
+    background-color: lightgrey;
+    border-radius: 2rem;
+    position: relative;
+    width: 30vw;
+    margin: 1em 0;
+    padding: 2em;
+}
+
+.corner {
+    background-color: transparent;
+    color: hotpink;
+    font-size: 3rem;
+    border: none;
+    outline: none;
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.corner:hover {
+    color: rgb(195, 63, 129);
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+
+
+
+/* CONVEYOR BELT ------------------------------------- */
 
 .conveyor {
     position: absolute;
@@ -58,9 +124,12 @@ h1 {
 }
 
 
+
+/* SHOPPING CART ------------------------------------- */
+
 #cart {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 40%;
     width: 10%;
 }

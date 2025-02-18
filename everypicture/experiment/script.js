@@ -8,13 +8,15 @@
 
     // CONVEYOR BELT
     const stuffie = document.querySelectorAll('.stuffie');
+    const bigbun = document.querySelector('.bigbun');
 
     stuffie.forEach(function(images) {
 
         images.addEventListener('mouseover', function(){
+            if (overlay.classList.contains('showing')) return;
             let glowColor = '';
 
-            if (images.classList.contains('bunbun')) {
+            if (images.classList.contains('bunbun') || images.classList.contains('bigbun')) {
                 glowColor = 'hotpink';
             } else if (images.classList.contains('bolt')) {
                 glowColor = 'skyblue';
@@ -28,14 +30,46 @@
 
             images.style.filter = `drop-shadow(0 0 8px ${glowColor}) grayscale(0%) saturate(1.2)`;
             images.style.cursor = 'pointer';
-            images.style.transform = 'scale(1.2)';
         });
 
-        images.addEventListener('mouseleave', function(){
+        images.addEventListener('mouseleave', function() {
             images.style.filter = 'drop-shadow(0 0 3px white) grayscale(100%)';
-            images.style.transform = 'scale(1)';
         });
     });
+
+
+
+    // ONCLICK OVERLAY
+
+    const overlay = document.querySelector('#overlay');
+
+    document.querySelector('.bigbun').addEventListener('click', function(event){
+        event.preventDefault();
+        overlay.className = 'showing;'
+        bunbun.className = 'stuffie bigbun active';
+        bigbun.style.filter = 'drop-shadow(0 0 8px hotpink) grayscale(0%) saturate(1.2)';
+
+        document.addEventListener('keydown', function(event) {
+            event.preventDefault();
+            if (event.key === 'Escape') {
+                overlay.className = 'hidden';
+                bigbun.classList.remove('active');
+                bigbun.style.filter = 'drop-shadow(0 0 3px white) grayscale(100%)';
+            }
+        });
+    });
+
+
+    
+    // ONCLICK OVERLAY
+
+    const closeBtn = document.querySelector ('.close');
+
+    closeBtn.addEventListener('click', function(event){
+        event.preventDefault();
+        document.querySelector('.showing').className = 'overlay hidden';
+    });
+
 
 
 
