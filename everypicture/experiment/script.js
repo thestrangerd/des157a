@@ -45,8 +45,8 @@
 
     document.querySelector('.bigbun').addEventListener('click', function(event){
         event.preventDefault();
-        overlay.className = 'showing;'
-        bunbun.className = 'stuffie bigbun active';
+        overlay.className = 'showing';
+        bigbun.className = 'stuffie bigbun active';
         bigbun.style.filter = 'drop-shadow(0 0 8px hotpink) grayscale(0%) saturate(1.2)';
 
         document.addEventListener('keydown', function(event) {
@@ -58,6 +58,7 @@
             }
         });
     });
+
 
 
     
