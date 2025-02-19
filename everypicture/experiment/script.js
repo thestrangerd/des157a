@@ -13,7 +13,6 @@
     stuffie.forEach(function(images) {
 
         images.addEventListener('mouseover', function(){
-            if (overlay.classList.contains('showing')) return;
             let glowColor = '';
 
             if (images.classList.contains('bunbun') || images.classList.contains('bigbun')) {
@@ -69,6 +68,7 @@
     closeBtn.addEventListener('click', function(event){
         event.preventDefault();
         document.querySelector('.showing').className = 'overlay hidden';
+        bigbun.style.filter = 'drop-shadow(0 0 3px white) grayscale(100%)';
     });
 
 

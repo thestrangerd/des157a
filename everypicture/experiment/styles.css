@@ -38,6 +38,10 @@ a:hover {
     margin-top: -2em;
 }
 
+.active {
+    filter: drop-shadow(0 0 8px hotpink) grayscale(0%);
+}
+
 @keyframes shake {
     0%, 100% {transform: rotate(-15deg);}
     50% {transform: rotate(15deg);}
