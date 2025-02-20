@@ -1,0 +1,84 @@
+
+
+
+/* UNIVERSAL PROPERTIES ------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/bg-cover.svg) no-repeat center center fixed; 
+    background-size: cover;
+    font-family: "Alexandria", serif;
+    font-weight: 700;
+}
+  
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+/* ARROW BUTTONS ------------------------------------------ */
+
+#next {
+    position: absolute;
+    top: 40%;
+    left: 87%;
+}
+
+#previous {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+}
+
+.arrow {
+    width: 10%;
+    transition: transform 0.5s ease;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px red);
+    transform: scale(1.1);
+}
+
+#nexttext, #previoustext {
+    color: #FA5330;
+    font-size: 2rem;
+    position: absolute;
+    top: 55%;
+}
+
+#nexttext {
+    left: 88%;
+}
+
+#previoustext {
+    left: 8%;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: showing;
+}
