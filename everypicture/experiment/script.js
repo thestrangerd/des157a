@@ -15,7 +15,7 @@
         images.addEventListener('mouseover', function(){
             let glowColor = '';
 
-            if (images.classList.contains('bunbun') || images.classList.contains('bigbun')) {
+            if (images.classList.contains('bunbun')) {
                 glowColor = 'hotpink';
             } else if (images.classList.contains('bolt')) {
                 glowColor = 'skyblue';
@@ -31,12 +31,18 @@
             images.style.cursor = 'pointer';
         });
 
-        images.addEventListener('mouseleave', function() {
-            images.style.filter = 'drop-shadow(0 0 3px white) grayscale(100%)';
-        });
+        images.addEventListener('mouseleave', goBW(images));
     });
 
+    function goBW(images) {
+        images.style.filter = 'drop-shadow(0 0 3px white) grayscale(100%)';
+    }
 
+
+
+    // BIGBUN
+
+    images.classList.contains('bigbun')
 
     // ONCLICK OVERLAY
 

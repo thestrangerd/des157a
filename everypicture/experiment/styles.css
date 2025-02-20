@@ -117,7 +117,6 @@ a:hover {
     height: 40%;
 }
 
-
 @keyframes moveBelt {
     from {
         transform: translateX(0);
