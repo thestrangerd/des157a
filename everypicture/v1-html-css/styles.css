@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url(images/bg-cover.svg) no-repeat center center fixed; 
+    background: url(images/background.svg) no-repeat center center fixed; 
     background-size: cover;
     font-family: "Alexandria", serif;
     font-weight: 700;
@@ -33,19 +33,35 @@ img {
 
 
 
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+}
+
+#cover {
+    position: absolute;
+    right: 13%;
+    width: 40svw;
+}
+
 
 
 /* ARROW BUTTONS ------------------------------------------ */
 
-#next {
+#next, #previous {
     position: absolute;
-    top: 40%;
+    top: 47%;
+    transform: translateY(-50%);
+}
+
+#next {
     left: 87%;
 }
 
 #previous {
-    position: absolute;
-    top: 40%;
     left: 4%;
 }
 
@@ -64,15 +80,16 @@ img {
     color: #FA5330;
     font-size: 2rem;
     position: absolute;
-    top: 55%;
+    top: 53%;
+    transform: translateY(50%);
 }
 
 #nexttext {
-    left: 88%;
+    left: 88svw ;
 }
 
 #previoustext {
-    left: 8%;
+    left: 8svw;
 }
 
 .hidden {
