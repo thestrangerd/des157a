@@ -31,24 +31,6 @@ img {
 
 
 
-
-
-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100svh;
-}
-
-#cover {
-    position: absolute;
-    right: 13%;
-    width: 40svw;
-}
-
-
-
 /* ARROW BUTTONS ------------------------------------------ */
 
 #next, #previous {
@@ -58,7 +40,7 @@ section {
 }
 
 #next {
-    left: 87%;
+    left: 86%;
 }
 
 #previous {
@@ -66,7 +48,7 @@ section {
 }
 
 .arrow {
-    width: 10%;
+    width: 10svw;
     transition: transform 0.5s ease;
 }
 
@@ -85,7 +67,7 @@ section {
 }
 
 #nexttext {
-    left: 88svw ;
+    left: 87svw ;
 }
 
 #previoustext {
@@ -97,5 +79,36 @@ section {
 }
 
 .showing {
-    display: showing;
+    display: block;
+}
+
+
+
+/* BOOKS / PAGES ------------------------------------------ */
+
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100svw;
+    height: 100svh;
+    z-index: -1;
+}
+
+.cover {
+    position: absolute;
+    right: 14%;
+    width: 38svw;
+}
+
+.page {
+    position: absolute;
+    width: 72svw;
+}
+
+.back {
+    position: absolute;
+    left: 14%;
+    width: 38svw;
 }
