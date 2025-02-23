@@ -1,0 +1,114 @@
+
+
+
+/* UNIVERSAL PROPERTIES ------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/background.svg) no-repeat center center fixed; 
+    background-size: cover;
+    font-family: "Alexandria", serif;
+    font-weight: 700;
+}
+  
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+/* ARROW BUTTONS ------------------------------------------ */
+
+#next, #previous {
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+}
+
+#next {
+    left: 86%;
+}
+
+#previous {
+    left: 4%;
+}
+
+.arrow {
+    width: 10svw;
+    transition: transform 0.5s ease;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px red);
+    transform: scale(1.1);
+}
+
+#nexttext, #previoustext {
+    color: #FA5330;
+    font-size: 2rem;
+    position: absolute;
+    top: 53%;
+    transform: translateY(50%);
+}
+
+#nexttext {
+    left: 87svw ;
+}
+
+#previoustext {
+    left: 8svw;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+
+
+/* BOOKS / PAGES ------------------------------------------ */
+
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100svw;
+    height: 100svh;
+    z-index: -1;
+}
+
+.cover {
+    position: absolute;
+    right: 14%;
+    width: 38svw;
+}
+
+.page {
+    position: absolute;
+    width: 72svw;
+}
+
+.back {
+    position: absolute;
+    left: 14%;
+    width: 38svw;
+}
