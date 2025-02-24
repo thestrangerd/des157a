@@ -18,16 +18,102 @@ h1, h2, p {
     margin: 0;
     padding: 0;
 }
-
-ul {
-    list-style-type: none;
-}
   
 img {
     display: block;
     height: auto;
     max-width: 100%;
 }
+
+
+
+
+
+/* SIDE TAB (KEY WORDS) ----------------------------------- */
+
+#side-tab {
+    background-color: #FA5330;
+    border: 0.5em solid #FFF0E1;
+    border-radius: 1em 0 0 1em;
+    box-sizing: content-box;
+
+    position: fixed;
+    /* top: 0; */
+    right: -10px;
+    width: 4em;
+    height: 10em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    padding: 0.3em;
+    transition: width 0.3s ease-in-out, right 0.3s ease-in-out, border 0.1s ease-in;
+}
+
+#side-tab p {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    
+    position: absolute;
+    margin-right: 1em;
+    white-space: nowrap;
+    transform: rotate(-90deg) translateY(50%);
+}
+
+#side-tab:hover {
+    width: 4.5em;
+}
+
+#side-tab.open {
+    border: none;
+    top: 1%;
+    right: 200px;
+}
+
+/* ---------------------------------- */
+
+#side-panel {
+    background-color: #FACA32;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 2;
+    width: 200px;
+    height: 100svh;
+    transition: right 0.3s ease-in-out;
+}
+
+h3 {
+    border-bottom: 2px solid black;
+    text-align: center;
+    margin: 1em 1em 0.5em 1em;
+    padding-bottom: 0.5em;
+}
+
+li {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-left: 0.5em;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 210px;
+}
+
+#side-panel.open {
+    right: 0;
+}
+
+#side-panel.close {
+    right: -250px;
+}
+
+
 
 
 
@@ -84,6 +170,8 @@ img {
 
 
 
+
+
 /* BOOKS / PAGES ------------------------------------------ */
 
 section {
@@ -111,4 +199,19 @@ section {
     position: absolute;
     left: 14%;
     width: 38svw;
+}
+
+.page-content {
+    display: none;
+    position: absolute;
+}
+
+.page-content.showing {
+    display: block;
+}
+
+/* ---------------------------------- */
+
+#page1 p {
+    
 }
