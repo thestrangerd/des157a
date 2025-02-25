@@ -238,6 +238,7 @@ section {
 }
 
 .stuffie:hover {
+    cursor: pointer;
     filter: drop-shadow(0 0 8px hotpink) grayscale(0%);
 }
 
@@ -289,7 +290,7 @@ input {
     z-index: 10;
 }
 
-#page1 label {
+label {
     font-size: 1.2rem;
     text-align: center;
     display: block;
