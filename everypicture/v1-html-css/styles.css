@@ -10,13 +10,17 @@
 body {
     background: url(images/background.svg) no-repeat center center fixed; 
     background-size: cover;
-    font-family: "Alexandria", serif;
-    font-weight: 700;
+    font-family: "Patrick Hand", serif;
 }
   
 h1, h2, p {
     margin: 0;
     padding: 0;
+}
+
+#side-tab, #side-panel, #nexttext, #previoustext {
+    font-family: "Alexandria", serif;
+    font-weight: 700;
 }
   
 img {
@@ -168,13 +172,14 @@ li {
 /* BOOKS / PAGES ------------------------------------------ */
 
 section {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+    z-index: -1;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
 }
 
 .cover {
@@ -213,15 +218,14 @@ section {
 /* ---------------------------------- */
 
 #page1, #page2, #page3, #page4, #page5 {
+    font-size: 2vw;
     position: relative;
     width: 60vw;
     height: 75vh;
 }
 
 #page1 p {
-    font-family: "Patrick Hand", serif;
-    font-size: 2vw;
-
+    line-height: 2em;
     position: absolute;
     top: 0;
     left: 0;
