@@ -107,7 +107,7 @@
     const sideTab = document.querySelector('#side-tab');
     const sidePanel = document.querySelector('#side-panel');
 
-    // open panel by clicking tab or tab p
+    // open / close panel by clicking tab 
     sideTab.addEventListener('click', function(event) {
         event.preventDefault()
 
