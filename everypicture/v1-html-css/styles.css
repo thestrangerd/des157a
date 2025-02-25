@@ -33,12 +33,12 @@ img {
 
 #side-tab {
     background-color: #FA5330;
-    border: 0.5em solid #FFF0E1;
+    /* border: 0.5em solid #FFF0E1; */
     border-radius: 1em 0 0 1em;
     box-sizing: content-box;
 
     position: fixed;
-    /* top: 0; */
+    top: 1%;
     right: -10px;
     width: 4em;
     height: 10em;
@@ -49,7 +49,7 @@ img {
 
     cursor: pointer;
     padding: 0.3em;
-    transition: width 0.3s ease-in-out, right 0.3s ease-in-out, border 0.1s ease-in;
+    transition: width 0.3s ease-in-out, right 0.25s ease-in-out;
 }
 
 #side-tab p {
@@ -68,7 +68,6 @@ img {
 }
 
 #side-tab.open {
-    border: none;
     top: 1%;
     right: 200px;
 }
@@ -82,11 +81,11 @@ img {
     right: -250px;
     z-index: 2;
     width: 200px;
-    height: 100svh;
+    height: 100vh;
     transition: right 0.3s ease-in-out;
 }
 
-h3 {
+h2 {
     border-bottom: 2px solid black;
     text-align: center;
     margin: 1em 1em 0.5em 1em;
@@ -97,12 +96,6 @@ li {
     font-size: 1.2em;
     line-height: 1.5em;
     margin-left: 0.5em;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 210px;
 }
 
 #side-panel.open {
@@ -134,7 +127,7 @@ li {
 }
 
 .arrow {
-    width: 10svw;
+    width: 10vw;
     transition: transform 0.5s ease;
 }
 
@@ -153,11 +146,11 @@ li {
 }
 
 #nexttext {
-    left: 87svw ;
+    left: 87vw;
 }
 
 #previoustext {
-    left: 8svw;
+    right: 87vw;
 }
 
 .hidden {
@@ -179,31 +172,38 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100svw;
-    height: 100svh;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .cover {
     position: absolute;
     right: 14%;
-    width: 38svw;
+    width: 38vw;
+    z-index: -1;
 }
 
 .page {
     position: absolute;
-    width: 72svw;
+    width: 72vw;
+    z-index: -1;
 }
 
 .back {
     position: absolute;
     left: 14%;
-    width: 38svw;
+    width: 38vw;
+    z-index: -1;
 }
 
 .page-content {
     display: none;
     position: absolute;
+}
+
+.page-content.hidden {
+    display: none;
 }
 
 .page-content.showing {
@@ -212,6 +212,18 @@ section {
 
 /* ---------------------------------- */
 
+#page1, #page2, #page3, #page4, #page5 {
+    position: relative;
+    width: 60vw;
+    height: 75vh;
+}
+
 #page1 p {
-    
+    font-family: "Patrick Hand", serif;
+    font-size: 2vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }

@@ -6,14 +6,12 @@
     console.log('reading js');
 
 
-    // FLIPPING PAGES WITH ARROWS
-
     const bookPage = document.querySelector('.cover');
     const nextButton = document.querySelector('#next');
     const prevButton = document.querySelector('#previous');
     const nextText = document.querySelector('#nexttext');
     const prevText = document.querySelector('#previoustext');
-    const pageContent = document.querySelectorAll('#page-content');
+    const allPages = document.querySelectorAll('.page-content');
 
     nextButton.addEventListener('click', nextPage);
     prevButton.addEventListener('click', previousPage);
@@ -28,6 +26,10 @@
         'images/page5.svg',
         'images/back-cover.svg'
     ]
+
+
+
+    // FLIPPING PAGES WITH ARROWS
 
     function nextPage() {
         // on button click, increase img in array
@@ -45,22 +47,27 @@
         }
     }
 
-    function updatePage() {
-        // change page svg on button click
-        bookPage.src = pages[currentPage];
 
-        for (let i = 1; i < 5; i++) {
-            const page = document.querySelector('page' + i);
-            if (page) {
-                pages[i].className = 'page-content';
-            }
+
+    // UPDATE PAGE CONTENT
+
+    function updatePage() {
+        // initially hides all page content
+        for (let i = 0; i < allPages.length; i++) {
+            allPages[i].className = 'page-content hidden';
         }
 
         // detects page # in array and shows page content
-        const currentPageContent = document.querySelector('#page' + currentPage);
-        if (currentPageContent) {
-            currentPageContent.className = 'page-content showing';
-        } 
+        if (currentPage > 0 && currentPage <= allPages.length) {
+            const currentPageContent = document.querySelector(`#page${currentPage}`);
+            if (currentPageContent) {
+                currentPageContent.className = 'page-content showing';
+            } 
+        }
+
+        // change page svg on button click
+        bookPage.src = pages[currentPage];
+        console.log(`#page${currentPage}`)
 
         // determines style / position based on which page
         if (currentPage === 0) {
@@ -72,20 +79,22 @@
         }
 
         // hides arrows on first and last page
-        if (currentPage === pages.length - 1) {
-            nextButton.className = 'arrow hidden';
-            nextText.className = 'nexttext hidden'
-        } else {
-            nextButton.className = 'arrow showing';
-            nextText.className = 'nexttext'
-        }
-
         if (currentPage === 0) {
+            // hides prev arrow on cover page
             prevButton.className = 'arrow hidden';
             prevText.className = 'previoustext hidden'
         } else {
             prevButton.className = 'arrow showing';
             prevText.className = 'previoustext'
+        }
+
+        if (currentPage === pages.length - 1) {
+            // hides next arrow on last page
+            nextButton.className = 'arrow hidden';
+            nextText.className = 'nexttext hidden'
+        } else {
+            nextButton.className = 'arrow showing';
+            nextText.className = 'nexttext'
         }
     }
 
@@ -97,13 +106,18 @@
 
     const sideTab = document.querySelector('#side-tab');
     const sidePanel = document.querySelector('#side-panel');
-    const closeBtn = document.querySelector('.close-btn');
 
     // open panel by clicking tab or tab p
     sideTab.addEventListener('click', function(event) {
         event.preventDefault()
-        sideTab.className = 'open';
-        sidePanel.className = 'open';
+
+        if (sidePanel.className === 'open') {
+            sideTab.className = 'close';
+            sidePanel.className = 'close';
+        } else {
+            sideTab.className = 'open';
+            sidePanel.className = 'open';
+        }
     }); 
 
     // closes tab with escape key
