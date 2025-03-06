@@ -1,0 +1,219 @@
+
+
+
+/* UNIVERSAL PROPERTIES ------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* set background to smth */
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    overflow: hidden;
+}
+
+main {
+    position: absolute;
+    top: 50%;            
+    left: 50%;         
+    transform: translate(-50%, -50%);
+
+    width: 1200px;
+    height: 750px;
+    margin: 0;
+}
+  
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+  
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+/* BACKGROUND ------------------------------------------ */
+
+#background {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+}
+
+#wave1, #wave2, #wave3, #wave4 {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+#wave1 {
+    z-index: 1;
+}
+
+#wave2 {
+    z-index: 2;
+}
+
+#wave3 {
+    z-index: 3;
+}
+
+#wave4 {
+    z-index: 4;
+}
+
+#foreground {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    z-index: 5;
+}
+
+
+
+/* CAPYBARAS + TANGS ------------------------------------------ */
+
+.capy {
+    position: absolute;
+}
+
+#capy1 {
+    bottom: 45%;
+    z-index: 1;
+}
+
+#capy2 {
+    bottom: 24%;
+    z-index: 3;
+}
+
+/* --------------------------------- */
+
+#tang1, #tang2 {
+    position: absolute;
+    right: 0;
+}
+
+#tang1 {
+    bottom: 45%;
+    z-index: 1; 
+}
+
+#tang2 {
+    bottom: 22%;
+    z-index: 3; 
+}
+
+.sparkles {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+
+#sparkle1 {
+    bottom: 30vh; 
+}
+
+/* #sparkle2 {
+    top: -10px;  
+    left: -10px;
+} */
+
+
+
+/* TEXT BOXES ------------------------------------------ */
+
+#textbox {
+    position: absolute;
+    top: 10;            
+    left: 50%;         
+    transform: translate(-50%);
+}
+
+#text {
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 4%; 
+    left: 50%;         
+    transform: translate(-50%);
+}
+
+
+
+/* FOOTER (PLAYER AREA) ------------------------------------------ */
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 100%;
+    z-index: 6;
+}
+
+button {
+    background-color: #F8A72D;
+    color: white;
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 20px #C67F14;
+
+    outline: none;
+    margin: auto;
+    margin-bottom: 1.2em;
+    padding: 0.7em 2em;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(20px);
+}
+
+#player1 {
+    background-color: white;
+    border: 10px solid #FF5C7F;
+    border-radius: 1em;
+    margin: 1em 2em -2em 2em;
+}
+
+#player2 {
+    background-color: white;
+    border: 10px solid #FFE941;
+    border-radius: 1em;
+    margin: 1em 2em -2em 2em;
+}
+
+#player1, #player2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container p {
+    font-size: 2rem;
+}
+
+#player1 p {
+    color: #FF5C7F;
+}
+
+#player2 p {
+    color: #E9BC34;
+}
