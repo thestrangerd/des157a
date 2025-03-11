@@ -38,6 +38,8 @@ img {
 
 
 
+
+
 /* TITLE SCREEN ------------------------------------------ */
 
 /* hides game initially */
@@ -87,12 +89,86 @@ img {
     position: absolute;
     bottom: 3%;
     left: 7%;
+    animation: wave 2s ease;
 }
 
 /* wave in front of capy */
 #front-wave {
     z-index: 3;
 }
+
+@keyframes wave {
+    0%, 100% {
+        transition: translateX(10%);
+    }
+
+    50% {
+        transition: translateX(-10%);
+    }
+}
+
+
+
+
+
+/* TUTORIAL OVERLAY ------------------------------------------ */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out, display 2s ease;
+}
+
+.overlay article {
+    background-color: #FFECDD;
+    border-radius: 2em;
+    box-shadow: 0 20px #F8A72D;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60vw;
+    height: 70vh;
+    padding: 20px;
+}
+
+/* --------------------------------- */
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.overlay p {
+    padding: 3em;
+}
+
+#close {
+    font-size: 2rem;
+
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+
+.hidden {
+    display: none;
+}
+
 
 
 
@@ -140,7 +216,9 @@ img {
 
 
 
-/* CAPYBARAS + TANGS ------------------------------------------ */
+
+
+/* CAPYBARAS + TANGS ---------------------------------------- */
 
 .capy {
     position: absolute;
@@ -192,6 +270,8 @@ img {
 
 
 
+
+
 /* TEXT BOXES ------------------------------------------ */
 
 #textbox {
@@ -210,6 +290,8 @@ img {
     left: 50%;         
     transform: translate(-50%);
 }
+
+
 
 
 
@@ -252,7 +334,7 @@ button:active {
     background-color: white;
     border: 10px solid #FF5C7F;
     border-radius: 1em;
-    margin: 1em 2em -2em 2em;
+    /* margin: 1em 2em -2em 2em; */
 }
 
 #player2 {
