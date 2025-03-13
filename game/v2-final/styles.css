@@ -248,6 +248,10 @@ h2 {
     position: absolute;
 }
 
+#capy1, #capy2 {
+    transition: transform 0.3s ease-in-out;
+}
+
 #capy1 {
     bottom: 45%;
     z-index: 1;

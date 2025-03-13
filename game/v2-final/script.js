@@ -92,6 +92,13 @@
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
 
+        const moveLines = [
+            `${gameData.players[gameData.index]} feels strangely determined. Keep swimming!`,
+            `${gameData.players[gameData.index]} wants the tangerine badly. Keep swimming!`,
+            `${gameData.players[gameData.index]} likes the splashing sounds. Keep swimming!`,
+            `${gameData.players[gameData.index]} wants to keep going. Keep swimming!`,
+        ];
+
         const skipLines = [
             `${gameData.players[gameData.index]} gets distracted by the splashing! Switch players.`,
             `${gameData.players[gameData.index]} is too busy playing in the water! Switch players.`,
@@ -100,15 +107,15 @@
             `${gameData.players[gameData.index]} wonders if the effort is worth it. Switch players.`,
         ];
 
-        // move capybaras depending on roll
-        text.innerHTML = `${gameData.players[gameData.index]}, feels determined. Keep swimming!`;
+        // move capybaras depending on roll, randomizes line
+        text.innerHTML = moveLines[Math.floor(Math.random() * moveLines.length)];
+
 
 
         // if either roll = 1 then skip player
         if (gameData.roll1 === 1 || gameData.roll2 === 1) {
             // randomize skip lines in array
-            const distracted = skipLines[Math.floor(Math.random() * skipLines.length)];
-            text.innerHTML = distracted;
+            text.innerHTML = skipLines[Math.floor(Math.random() * skipLines.length)];
             
             // prevents button use when switching players
             swimBtn.disabled = true;
@@ -120,7 +127,7 @@
 
                 swimBtn.disabled = false;
                 setUpTurn();
-            }, 1000);
+            }, 1500);
             
         }
         else {
