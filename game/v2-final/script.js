@@ -121,7 +121,7 @@
             swimBtn.disabled = true;
 
             setTimeout(function() {
-                gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+                gameData.index = gameData.index === 0 ? 1 : 0;
                 console.log(`Switched to player: ${gameData.players[gameData.index]}`);
                 console.log(gameData.roll1, gameData.roll2);
 
