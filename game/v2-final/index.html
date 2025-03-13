@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Final Game [PENDING TITLE]</title>
+        <title>CAPY Splash!</title>
 
          <!-- NORMALIZE -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -26,34 +26,38 @@
         <main>
 
             <div id="title-screen">
-                <h1>Pending Title</h1>
+                <h1>Capy Splash!</h1>
                 <button id="start-button">Start</button>
                 <img src="images/title-bg.svg" alt="rocks">
+                
                 <img src="images/title-waves.svg" class="title-waves" alt="waves">
                 <img src="images/title-capy.svg" id="title-capy" alt="capybara">
                 <img src="images/title-frontwave.svg" id="frontwave" class="title-waves" alt="wave">
             </div>
 
             <div id="game-container">
+
                 <div>
                     <img src="images/textbox.svg" id="textbox" alt="orange textbox">
-                    <p id="text">Text will go here. YAYYYY !!!!!!!!!!!</p>
+                    <p id="text"></p>
                 </div>
 
                 <section class="overlay hidden">
                     <article>
                         <h2>How to Play</h2>
-                        <p>this is a tutorial!</p>
-                        <button id="close">Let's Race!</button>
+                        <p>This is a tutorial WIP! <br> (Note: please do not spam the SWIM button)</p>
+                        <button id="close">Race!</button>
                     </article>
                 </section>
             
                 <!-- BACKGROUND + WAVES -->
                 <img src="images/background.svg" id="background" alt="rock background">
+
                 <img src="images/wave1.svg" id="wave1" class="wave" alt="blue wave">
                 <img src="images/wave2.svg" id="wave2" class="wave" alt="blue wave">
                 <img src="images/wave3.svg" id="wave3" class="wave" alt="blue wave">
                 <img src="images/wave4.svg" id="wave4" class="wave" alt="blue wave"> 
+
     
                 <!-- CAPYBARAS -->
                 <img src="images/capy1.svg" id="capy1" class="capy" alt="capybara with pink bandana around neck">
@@ -72,9 +76,10 @@
                 <!-- PLAYERS + ROLL BUTTON -->
                 <div id="container"> 
                     <div id="player1"><p>CAPY 1</p></div>
-                    <button>SWIM!</button>
+                    <button id="swim-button">SWIM!</button>
                     <div id="player2"><p>CAPY 2</p></div>
                 </div>
+
             </div>
         </main>
 

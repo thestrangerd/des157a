@@ -15,6 +15,7 @@ body {
 }
 
 main {
+    overflow: hidden;
     position: absolute;
     top: 50%;            
     left: 50%;         
@@ -64,13 +65,14 @@ img {
 
 #title-screen h1 {
     color: white;
-    font-size: 7rem;
+    font-size: 5.5rem;
     line-height: 1em;
     
     position: absolute;
-    top: 25%;
-    right: 28%;
-    width: 2em;
+    top: 35%;
+    right: 8%;
+    width: auto;
+    animation: waveY 2s ease-in-out infinite;
 }
 
 #start-button {
@@ -83,27 +85,31 @@ img {
 .title-waves {
     position: absolute;
     bottom: 0;
+    animation: waveY 2s ease-in-out infinite;
 }
 
 #title-capy {
     position: absolute;
     bottom: 3%;
     left: 7%;
-    animation: wave 2s ease;
+    animation: waveY 2s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
 /* wave in front of capy */
-#front-wave {
+#frontwave {
+    position: absolute;
+    bottom: -3%;
     z-index: 3;
 }
 
-@keyframes wave {
+@keyframes waveY {
     0%, 100% {
-        transition: translateX(10%);
+        transform: translateY(0);
     }
 
     50% {
-        transition: translateX(-10%);
+        transform: translateY(-10px);
     }
 }
 
@@ -152,7 +158,9 @@ h2 {
 }
 
 .overlay p {
-    padding: 3em;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    padding: 2em 3em;
 }
 
 #close {
@@ -187,24 +195,40 @@ h2 {
     width: 100vw;
 }
 
+.wave {
+    animation: waveY 3s linear infinite;
+}
+
 #wave1 {
     z-index: 1;
+    animation-delay: 1s;
 }
 
 #wave2 {
     z-index: 2;
+    animation-delay: 0.5s;
 }
 
 #wave3 {
     z-index: 3;
+    animation-delay: 3s;
 }
 
 #wave4 {
     z-index: 4;
+    animation-delay: 2s;
 }
 
-@keyframes wave {
-
+@keyframes waveX {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 #foreground {
@@ -232,6 +256,19 @@ h2 {
 #capy2 {
     bottom: 24%;
     z-index: 3;
+}
+
+.capyswim {
+    animation: capySwim 1s forwards;
+}
+
+@keyframes capySwim {
+    from {
+        transition: translateX(0);
+    }
+    to {
+        transition: translateX(10px);
+    }
 }
 
 /* --------------------------------- */
@@ -289,6 +326,7 @@ h2 {
     top: 4%; 
     left: 50%;         
     transform: translate(-50%);
+    width: 100%;
 }
 
 
@@ -334,6 +372,7 @@ button:active {
     background-color: white;
     border: 10px solid #FF5C7F;
     border-radius: 1em;
+    margin: 1rem 2rem;
     /* margin: 1em 2em -2em 2em; */
 }
 
@@ -341,7 +380,8 @@ button:active {
     background-color: white;
     border: 10px solid #FFE941;
     border-radius: 1em;
-    margin: 1em 2em -2em 2em;
+    margin: 1rem 2rem;
+    /* margin: 1em 2em -2em 2em; */
 }
 
 #player1, #player2 {
